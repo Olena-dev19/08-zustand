@@ -31,6 +31,7 @@ export async function fetchNotes(
 
 export async function createNote(newNote: NewNote): Promise<Note> {
   const response = await axios.post<Note>("/notes", newNote);
+
   return response.data;
 }
 export async function deleteNote(noteId: string): Promise<Note> {
